@@ -1,0 +1,50 @@
+{
+  "url": "../../../assets/galleryicons/pics/picBig.png",
+  "dislikeNum": 4,
+  "likeNum": 6,
+  "userIsLikeActive": true,
+  "userIsDisLikeActive": false,
+  "comments": [
+    {
+      "author": "Anon93",
+      "date" : "Sun Oct 29 2017 13:23:45 GMT+0200",
+      "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum expedita hic maiores necessitatibus nisi nulla reprehenderit sapiente, suscipit tempora temporibus voluptas. Dolore eaque eveniet non tenetur. Delectus, facere, unde."
+    },
+    {
+      "author": "Andrey",
+      "date" : "Sun Oct 25 2017 13:22:45 GMT+0200",
+      "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum expedita hic maiores necessitatibus nisi nulla reprehenderit sapiente, suscipit tempora temporibus voluptas. Dolore eaque eveniet non tenetur. Delectus, facere, unde."
+    },
+    {
+      "author": "Andrey",
+      "date" : "Sun Oct 25 2017 13:22:45 GMT+0200",
+      "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum expedita hic maiores necessitatibus nisi nulla reprehenderit sapiente, suscipit tempora temporibus voluptas. Dolore eaque eveniet non tenetur. Delectus, facere, unde."
+    },
+    {
+      "author": "Andrey",
+      "date" : "Sun Oct 25 2017 13:22:45 GMT+0200",
+      "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum expedita hic maiores necessitatibus nisi nulla reprehenderit sapiente, suscipit tempora temporibus voluptas. Dolore eaque eveniet non tenetur. Delectus, facere, unde."
+    },
+    {
+      "author": "Andrey",
+      "date" : "Sun Oct 25 2017 13:22:45 GMT+0200",
+      "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum expedita hic maiores necessitatibus nisi nulla reprehenderit sapiente, suscipit tempora temporibus voluptas. Dolore eaque eveniet non tenetur. Delectus, facere, unde."
+    },
+    {
+      "author": "Andrey",
+      "date" : "Sun Oct 25 2017 13:22:45 GMT+0200",
+      "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum expedita hic maiores necessitatibus nisi nulla reprehenderit sapiente, suscipit tempora temporibus voluptas. Dolore eaque eveniet non tenetur. Delectus, facere, unde."
+    },
+    {
+      "author": "Andrey",
+      "date" : "Sun Oct 25 2017 13:22:45 GMT+0200",
+      "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum expedita hic maiores necessitatibus nisi nulla reprehenderit sapiente, suscipit tempora temporibus voluptas. Dolore eaque eveniet non tenetur. Delectus, facere, unde."
+    },
+    {
+      "author": "Andrey",
+      "date" : "Sun Oct 25 2017 13:22:45 GMT+0200",
+      "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum expedita hic maiores necessitatibus nisi nulla reprehenderit sapiente, suscipit tempora temporibus voluptas. Dolore eaque eveniet non tenetur. Delectus, facere, unde."
+    }
+  ]
+}
+

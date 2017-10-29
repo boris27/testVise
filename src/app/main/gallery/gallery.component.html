@@ -1,0 +1,71 @@
+<p class="intro">
+  WELCOME TO VISEVEN <span>IMAGESTOCK</span>
+</p>
+<div class="gallery">
+  <div class="imageContainer" *ngFor="let elem of imgsArr" [ngStyle]="{'grid-column': 'span '+(elem.width/236).toFixed(0), 'grid-row': 'span ' + (elem.height/200).toFixed(0)}">
+    <div class="image" [ngStyle]="{'background-image': 'url(' + elem.url +')', 'width': elem.width + 'px', 'height': elem.height + 'px' }" (click)="openBigImage()">
+    </div>
+    <section class="statusSection">
+      <div class="icon comments">
+         <div class="count">{{elem.commentNum}}</div>
+      </div>
+      <div class="icon dislike">
+        <div class="count">{{elem.dislikeNum}}</div>
+      </div>
+      <div class="icon like">
+        <div class="count">{{elem.likeNum}}</div>
+      </div>
+    </section>
+  </div>
+  <div class="addImageContainer">
+     <div class="content" (click)="revealAddForm(event)">
+       <div class="plusIcon"></div>
+       <p>Add your picture</p>
+     </div>
+    <div class="addForm">
+      <p>Insert Url</p>
+      <input type="text"/>
+      <button (click)="submitNewImg($event)">Add</button>
+    </div>
+  </div>
+  <div class="imageDetailsContainer">
+    <div class="imageDetails" *ngIf="this.bigImgData">
+      <section class="largeImg">
+         <div class="imgSection" [ngStyle]="{'background-image': 'url('+ bigImgData.url +')'}">
+
+         </div>
+        <div class="statusSection">
+          <div class="icon dislike" [ngClass]="{ 'active' : bigImgData.userIsDisLikeActive }" (click)="clickLikeDislike($event)">
+            <div class="count">{{bigImgData.dislikeNum}}</div>
+          </div>
+          <div class="icon like" [ngClass]="{'active' : bigImgData.userIsLikeActive}" (click)="clickLikeDislike($event)">
+            <div class="count">{{bigImgData.likeNum}}</div>
+          </div>
+        </div>
+      </section>
+      <section class="commentsSection">
+        <h3>Comments: {{bigImgData.comments.length}}</h3>
+        <div class="commentsContainer">
+          <div class="commentExample" *ngFor="let elem of bigImgData.comments">
+            <section class="info">
+              <p>By {{elem.author}}</p>
+              <p>{{elem.date | date: 'd MMMM y hh:mm a'}}</p>
+            </section>
+            <section class="message">
+               {{elem.message}}
+            </section>
+          </div>
+        </div>
+        <hr>
+        <div class="userComment">
+          <input class="userNickname" type="text" placeholder="Type your nickname here..."/><br>
+          <section class="messageSend">
+            <textarea placeholder="Write your comment here..."></textarea>
+            <div class="sendMessage" (click)="addComment()"></div>
+          </section>
+        </div>
+      </section>
+      <div class="closeIcon" (click)="closeBigImage()"></div>
+    </div>
+  </div>
+</div>

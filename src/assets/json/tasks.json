@@ -1,0 +1,66 @@
+[
+	{
+		"url" : "../../../assets/galleryicons/pics/pic1.png",
+		"width" : 482,
+		"height" : 200,
+		"commentNum" : 3,
+		"dislikeNum" : 4,
+		"likeNum" : 10
+	},
+  {
+    "url" : "../../../assets/galleryicons/pics/pic2.png",
+    "width" : 236,
+    "height" : 410,
+    "commentNum" : 6,
+    "dislikeNum" : 4,
+    "likeNum" : 6
+  },
+  {
+    "url" : "../../../assets/galleryicons/pics/pic3.png",
+    "width" : 236,
+    "height" : 200,
+    "commentNum" : 2,
+    "dislikeNum" : 3,
+    "likeNum" : 15
+  },
+  {
+    "url" : "../../../assets/galleryicons/pics/pic4.png",
+    "width" : 236,
+    "height" : 200,
+    "commentNum" : 5,
+    "dislikeNum" : 7,
+    "likeNum" : 8
+  },
+  {
+    "url" : "../../../assets/galleryicons/pics/pic5.png",
+    "width" : 236,
+    "height" : 200,
+    "commentNum" : 2,
+    "dislikeNum" : 1,
+    "likeNum" : 3
+  },
+  {
+    "url" : "../../../assets/galleryicons/pics/pic6.png",
+    "width" : 236,
+    "height" : 200,
+    "commentNum" : 9,
+    "dislikeNum" : 2,
+    "likeNum" : 6
+  },
+  {
+    "url" : "../../../assets/galleryicons/pics/pic7.png",
+    "width" : 236,
+    "height" : 200,
+    "commentNum" : 4,
+    "dislikeNum" : 3,
+    "likeNum" : 15
+  },
+  {
+    "url" : "../../../assets/galleryicons/pics/pic8.png",
+    "width" : 482,
+    "height" : 200,
+    "commentNum" : 7,
+    "dislikeNum" : 4,
+    "likeNum" : 2
+  }
+]

@@ -1,0 +1,314 @@
+.intro
+  font-family: OpenSans, Arial
+  font-size: 24px
+  font-weight: bold
+  color: rgba(black, 0.5)
+  margin-bottom: 5px
+
+  span
+    color: #21b8c6
+
+*
+  .statusSection
+    flex-direction: row
+    justify-content: flex-end
+    width: 100%
+    height: 60px
+    background-color: white
+
+    .icon
+      position: relative
+      height: 100%
+      width: 60px
+      background-repeat: no-repeat
+      background-position: 50% 60%
+
+      .count
+        position: absolute
+        right: 7px
+        top: 10px
+        border: 2px solid #a1b1bb
+        border-radius: 100%
+        background-color: white
+        width: 15px
+        height: 15px
+        text-align: center
+        color: #21b8c6
+        font-size: 11px
+        font-weight: bold
+        line-height: 15px
+
+    .comments
+      background-image: url("../../../assets/galleryicons/commentIcon.png")
+      margin-right: auto
+
+    .like
+      background-image: url("../../../assets/galleryicons/likeIcon.png")
+
+    .dislike
+      background-image: url("../../../assets/galleryicons/dislikeIcon.png")
+
+.gallery
+  position: relative
+  display: grid
+  grid-template-rows: repeat(3, 200px)
+  grid-template-columns: repeat(3, 236px)
+  grid-gap: 10px
+  grid-auto-columns: 236px
+  grid-auto-flow: column dense
+  height: 680px
+  width: 100%
+  overflow-x: scroll
+
+
+  &::-webkit-scrollbar-track
+    border-radius: 10px
+    background-color: #d1dae3
+
+  &::-webkit-scrollbar
+    height: 10px
+    background-color: #f5f5f5
+
+  &::-webkit-scrollbar-thumb
+    border-radius: 10px
+    background-color: #21b8c6
+
+  .imageContainer
+    position: relative
+    border-radius: 5px
+    box-shadow: 0 0 5px 1px #888
+
+    &:hover
+      .statusSection
+        display: flex
+
+    .image
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+
+    .statusSection
+      display: none
+      position: absolute
+      bottom: 0
+      left: 0
+
+
+  .addImageContainer
+    width: 236px
+    height: 200px
+    background-color: white
+    display: flex
+    position: relative
+
+    .content
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+
+      .plusIcon
+        margin: 20px 5px 10px 5px
+        height: 50px
+        width: 50px
+        border: 1px solid #21b8c6
+        border-radius: 100%
+        background-color: #21b8c6
+        background-image: url("../../../assets/galleryicons/+icon.png")
+        background-repeat: no-repeat
+        background-position: center
+
+      p
+        text-align: center
+        font-family: OpenSans, Arial
+        font-size: 14px
+
+    .addForm
+      position: absolute
+      top: 0
+      left: 0
+      display: none
+      background-color: rgba( 240, 243, 246, 0.5 )
+      width: 236px
+      height: 200px
+      justify-content: space-around
+      align-items: center
+      flex-direction: column
+
+      input
+        width: 99%
+        border: 1px solid #21b8c6
+        border-radius: 3px
+        outline: none
+
+      button
+        width: 50%
+        border: 1px solid #21b8c6
+        border-radius: 3px
+        background-color: #21b8c6
+        color: white
+        outline: none
+
+
+  .imageDetailsContainer
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-color: rgba( 240, 243, 246, 0.5 )
+    display: none
+    justify-content: center
+    align-items: center
+
+    .imageDetails
+      position: relative
+      height: 595px
+      width: 810px
+      background-color: white
+      display: flex
+      flex-direction: row
+
+      .largeImg
+        width: 450px
+        height: 100%
+
+        .imgSection
+          width: 100%
+          height: calc(100% - 80px)
+          background-position: center
+          background-repeat: no-repeat
+
+        .statusSection
+          background-color: #f4f5f4
+          display: flex
+          .icon
+            top: -10px
+            background-color: #e0e5e9
+            margin-right: 5px
+
+          .like.active
+            top: 0
+            background-image: url("../../../assets/galleryicons/likeIconActive.png")
+            background-color: #28d0ce
+            .count
+              border-color: white
+
+          .dislike.active
+            top: 0
+            background-color: #d02828
+            background-image: url("../../../assets/galleryicons/dislikeIconActive.png")
+            .count
+              border-color: white
+
+      .commentsSection
+        box-sizing: border-box
+        padding: 35px 15px 20px 32px
+        width: 360px
+        height: 100%
+        font-family: OpenSans, Arial
+        color: #8499a7
+        display: flex
+        flex-direction: column
+
+        hr
+          background-color: #d1dae3
+          height: 2px
+          border: none
+          margin: 0
+          width: calc(100% - 20px)
+          align-self: flex-start
+
+        h3
+          font-family: 'OpenSans Semibold', OpenSans, Arial
+          font-size: 24px
+          margin-bottom: 10px
+
+        .commentsContainer
+          display: flex
+          flex-direction: column
+          height: 410px
+          overflow-y: scroll
+          padding-right: 18px
+
+
+          &::-webkit-scrollbar-track
+            border-radius: 10px
+            background-color: #d1dae3
+
+          &::-webkit-scrollbar
+            width: 5px
+            background-color: #f5f5f5
+
+          &::-webkit-scrollbar-thumb
+            border-radius: 10px
+            background-color: #21b8c6
+
+          .commentExample
+            padding-bottom: 10px
+            .info
+              display: flex
+              justify-content: space-between
+              font-size: 11px
+
+            .message
+              border: 2px solid #f0f3f6
+              border-radius: 5px
+              margin-top: 3px
+              padding: 15px 10px
+              font-size: 14px
+              line-height: 15px
+
+        .userComment
+          input, textarea
+            box-sizing: border-box
+            font-family: OpenSans, Arial
+            color: #8499a7
+            padding-left: 12px
+            width: 290px
+            outline: none
+
+          .userNickname
+            border: none
+            border-bottom: 1px solid #f0f3f6
+            margin-top: 15px
+            margin-bottom: 10px
+            font-size: 14px
+
+            &:focus
+              border-color: #21b8c6
+
+          .messageSend
+            display: flex
+            flex-direction: row
+            margin-top: 2px
+
+            textarea
+              padding-top: 10px
+              border: 1px solid #f0f3f6
+              height: 50px
+              width: 240px
+
+            .sendMessage
+              width: 50px
+              height: 50px
+              margin: 0
+              padding: 0
+              background-image: url("../../../assets/galleryicons/sendIcon.png")
+              background-position: center
+              background-repeat: no-repeat
+              background-color: #21b8c6
+              border-radius: 2px
+
+      .closeIcon
+        position: absolute
+        top: 10px
+        right: 15px
+        width: 20px
+        height: 20px
+        background-image: url("../../../assets/galleryicons/closeIcon.png")
+        background-repeat: no-repeat
+        background-position: center
+        cursor: pointer
