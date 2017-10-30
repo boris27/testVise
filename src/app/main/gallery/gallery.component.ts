@@ -17,7 +17,12 @@ export class GalleryComponent implements OnInit {
 
   openBigImage(event): void {
     this.http.get('../../../assets/json/bigImgData.json')
-      .subscribe((data) => this.bigImgData = data.json(), (err) => console.log(err));
+      .subscribe(
+        (data) => this.bigImgData = data.json(),
+        (err) => console.log(err),
+        () => setTimeout(() =>
+          this.elementRef.nativeElement.querySelector('.imgSection').style.backgroundImage = event.target.style.backgroundImage, 1 )
+        );
     this.elementRef.nativeElement.querySelector('.imageDetailsContainer').style.display = 'flex';
   }
 
