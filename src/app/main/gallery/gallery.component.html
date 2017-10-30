@@ -1,9 +1,9 @@
-<p class="intro">
+<h1 class="intro">
   WELCOME TO VISEVEN <span>IMAGESTOCK</span>
-</p>
+</h1>
 <div class="gallery">
-  <div class="imageContainer" *ngFor="let elem of imgsArr" [ngStyle]="{'grid-column': 'span '+(elem.width/236).toFixed(0), 'grid-row': 'span ' + (elem.height/200).toFixed(0)}">
-    <div class="image" [ngStyle]="{'background-image': 'url(' + elem.url +')', 'width': elem.width + 'px', 'height': elem.height + 'px' }" (click)="openBigImage()">
+  <div class="imageContainer" *ngFor="let elem of imgsArr" [ngStyle]="getGridDimension(elem.width, elem.height)">
+    <div class="image" [ngStyle]="{'background-image': 'url(' + elem.url +')'}" (click)="openBigImage($event)">
     </div>
     <section class="statusSection">
       <div class="icon comments">

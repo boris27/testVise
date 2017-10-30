@@ -15,7 +15,7 @@ export class GalleryComponent implements OnInit {
 
   constructor(private http: Http, private elementRef: ElementRef) {  }
 
-  openBigImage(): void {
+  openBigImage(event): void {
     this.http.get('../../../assets/json/bigImgData.json')
       .subscribe((data) => this.bigImgData = data.json(), (err) => console.log(err));
     this.elementRef.nativeElement.querySelector('.imageDetailsContainer').style.display = 'flex';
@@ -81,6 +81,14 @@ export class GalleryComponent implements OnInit {
   }
   revealAddForm(event): void {
     this.elementRef.nativeElement.querySelector('.addForm').style.display = 'flex';
+  }
+  getGridDimension(width, height) {
+    let resWidth = +(width / 236).toFixed(0) > 2 ? '2' : (width / 236).toFixed(0);
+    let resHeight = +(height / 200).toFixed(0) > 2 ? '2' : (height / 200).toFixed(0);
+    return {
+      'grid-column': 'span ' + resWidth,
+      'grid-row': 'span ' + resHeight
+    };
   }
   ngOnInit() {
     this.http.get('../../../assets/json/tasks.json')
